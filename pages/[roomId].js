@@ -39,7 +39,7 @@ const Room= ()=>{
             ...prev,
             [newUser]:{
               url:incomingStream,
-              muted:false,
+              muted:true,
               playing:true
             }
           }))
@@ -71,7 +71,7 @@ const Room= ()=>{
           ...prev,
           [callerId]:{
             url:incomingStream,
-            muted:false,
+            muted:true,
             playing:true
           }
         }))
@@ -133,8 +133,8 @@ const Room= ()=>{
     };
   }, [players, setPlayers, socket,users]);
 
-  
-
+  console.log(playerHighlighted);
+  console.log(notHighlighted);
     return(<>
         <div className="absolute w-9/12 left-0 right-0 mx-auto top-[20px] bottom-[50px] h-[calc((100vh-20px-100px)]">
           {
