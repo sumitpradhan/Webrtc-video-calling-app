@@ -14,7 +14,7 @@ const Player =(props)=>{
         >
             {playing?(<ReactPlayer
              url={url} 
-             muted={muted} 
+             muted={isActive?true:muted} 
              playing = {playing}
              width="100%"
              height="100%"/>): (
